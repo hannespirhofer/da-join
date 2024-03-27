@@ -31,7 +31,6 @@ let currentProgress;
  */
 async function initAddTask() {
     await includeHTML();
-    await checkPath();
     await fetchContactsAt();
     await fetchTasksAt();
     renderAddTask();
@@ -42,16 +41,6 @@ async function initAddTask() {
 }
 
 
-/**
- * If the path is the main addTask page, the close button gets removed
- */
-async function checkPath() {
-    if (window.location.pathname === "/add_task.html") {
-        await removeCloseButton();
-    } else {
-        await addCloseButton();
-    }
-}
 
 
 /**
@@ -152,17 +141,17 @@ function setArrowRotated() {
 /**
  * The close button gets removed
  */
-async function removeCloseButton() {
+/* async function removeCloseButton() {
     getField('closeButtonPopUpAt').classList.add('d-none');
-}
+} */
 
 
 /**
  * The close button gets added
  */
-async function addCloseButton() {
+/* async function addCloseButton() {
     getField('closeButtonPopUpAt').classList.remove('d-none');
-}
+} */
 
 
 /**

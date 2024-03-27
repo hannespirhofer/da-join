@@ -171,7 +171,7 @@ function setandSaveContact(id, email, firstname, lastname, fullname, initials, p
         "initials": initials
     }
     contacts.push(contact);
-    saveandShowContact(id);    
+    saveandShowContact(id);
 }
 
 /**

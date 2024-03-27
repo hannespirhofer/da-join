@@ -202,7 +202,7 @@ table img {
     width: 525px;
     max-height: 90%;
     background-color: white;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     padding: 48px 40px 48px 40px;
     box-sizing: border-box;
     position: relative;
