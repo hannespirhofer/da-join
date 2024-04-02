@@ -19,10 +19,10 @@
     <link rel="stylesheet" href="./css/mobileSpecific.css" />
 
     <script src="./js/mobile-design.js"></script>
-    <script src="./js/summary.js"></script>
+    <!-- <script src="./js/summary.js"></script> -->
     <script src="./script.js"></script>
-    <script src="./js/login.js"></script>
-    <script src="./js/includeHtml.js"></script>    
+    <!-- <script src="./js/login.js"></script> -->
+    <script src="./js/includeHtml.js"></script>
     <script src="./js/contacts_mobile.js"></script>
     <script src="./js/contacts.js"></script>
     <script src="./js/remoteStorage.js"></script>
@@ -33,27 +33,30 @@
     <div id="popupContainer">
         <div id="logoutContent">
             <div class="logoutHeaderContent">
-                <a href="./legal/legalNoticeInternal.html">Legal Notice</a>
-                <a href="./legal/privacyPolicyInternal.html">Privacy Policy</a>
-                <a href="./index.html">Log out</a>
+                <a href="/legal/legalNotice.html">Legal Notice</a>
+                <a href="/legal/privacyPolicy.html">Privacy Policy</a>
+                <a href="/index.html">Log out</a>
             </div>
         </div>
-    <!-- Include Header Template -->
-    <div w3-include-html="./templates/overlay_template.html"></div>
+        <!-- Include Header Template -->
+        <div w3-include-html="./templates/overlay_template.html"></div>
 
-    <!-- Include Header Template -->
-    <div class="" w3-include-html="./templates/sidebar_template.html"></div>
+        <div class="contacts-mainContainer">
+            <!-- Include Header Template -->
+            <div class="" w3-include-html="./templates/sidebar_template.html"></div>
 
-    <div class="board-content">
-        <!-- Include Main Header Template -->
-        <div w3-include-html="./templates/mainHeader_template.html"></div>
+            <div class="board-content">
+                <!-- Include Main Header Template -->
+                <div w3-include-html="./templates/mainHeader_template.html"></div>
 
-        <!-- Include Contacts Template -->
-        <div class="contacts-container content-main" w3-include-html="./templates/contacts_template.html"></div>
-    </div>
+                <!-- Include Contacts Template -->
+                <div class="contacts-container content-main" w3-include-html="./templates/contacts_template.html"></div>
+            </div>
 
-    <!-- Includes Mobile Navigation at the Bottom -->
-    <div w3-include-html="./templates/mobileMenuFooter_template.html"></div>
+        </div>
+
+        <!-- Includes Mobile Navigation at the Bottom -->
+        <div w3-include-html="./templates/mobileMenuFooter_template.html"></div>
 </body>
 
 </html>

@@ -1,52 +1,70 @@
 let users = [];
-let loggedInUser =[];
-let guestLoggedIn = false;
+let loggedInUser = [];
+let guest = false;
 
-async function register() {
-  let form = document.getElementById('SignUpForm');
+async function init() {}
+
+async function register(event) {
+  event.preventDefault();
+
+  const formdata = grabFormData();
+  fetchUsers();
+  users.push(formdata);
+  setUsers();
+
+  clearForm();
+  successSignUpPopup();
+  renderLoginWindow();
+}
+
+async function fetchUsers() {
+  users = JSON.parse(await getItem('users'));
+}
+
+async function setUsers() {
+  users = JSON.parse(await setItem('users'));
+}
+
+function clearForm() {
+  document.getElementById('SignUpForm').reset();
+}
+
+function grabFormData() {
   let mailInput = document.getElementById("registerMailInput");
   let userName = document.getElementById("registerUserName");
   let registerPassword = document.getElementById("registerPassword");
-  let registerBtn = document.querySelector(".registerButton");
-  event.preventDefault();
 
-  let users = JSON.parse(await getItem('users'));
-
-  users.push({
+  return {
     email: mailInput.value,
     name: userName.value,
     password: registerPassword.value,
-  });
-  await setItem("users", JSON.stringify(users));
-  form.reset();
-  initUsers();
-  successSignUpPopup();
-  goBackToLoginAfterSignUp();
-}
-
-async function initUsers() {
-  await loadUsers();
-}
-
-async function loadUsers(){
-  try {
-      users = JSON.parse(await getItem('users'));
-  } catch(e){
-      console.error('Loading error:', e);
   }
 }
 
-async function checkLogin() {
+
+async function loadUsers() {
+  try {
+    users = JSON.parse(await getItem('users'));
+  } catch (e) {
+    console.error('Loading error:', e);
+  }
+}
+
+async function checkLogin(event) {
   event.preventDefault();
-  guestLoggedIn = false;
-  localStorage.setItem('guest',JSON.stringify(guestLoggedIn));
+
+  guest = false;
+  localStorage.setItem('guest', JSON.stringify(guest));
+
   let userMail = document.getElementById('emailLoginField').value;
   let userPassword = document.getElementById('passwordLoginField').value;
+
   await loadUsers();
   let user = users.find(user => user.email === userMail);
   if (user && user.password === userPassword) {
     window.location.href = "summary.html";
-    greetUserInSummary();
+    greetUserInSummary(user.email);
+    localStorage.setItem('guest', false);
   } else {
     userNameOrPasswordIncorrect();
   }
@@ -54,39 +72,27 @@ async function checkLogin() {
 
 function userNameOrPasswordIncorrect() {
   let invalidText = document.getElementById('invalidText');
-  invalidText.innerHTML = `False Username or Password!`;
+  invalidText.innerHTML = `Wrong Username or Password!`;
 }
 
-//finding current logged in User functions:
+//find current logged in User functions
 
 function findUserNameByEmail(email) {
   const user = users.find(user => user.email === email);
   return user ? user.name : null;
 }
 
-async function greetUserInSummary() {
-  let currentMail = document.getElementById('emailLoginField').value;
-  loggedInUser.push(findUserNameByEmail(currentMail));
-  localStorage.setItem("userName", JSON.stringify(loggedInUser));
+async function greetUserInSummary(email) {
+  const loggedInEmail = email;
+  const name = findUserNameByEmail(loggedInEmail);
+  localStorage.setItem("username", name);
 }
 
-//sign Up Logic:
-
-function openSignUpWindow() {
-  let signUpContainer = document.getElementById("loginContentContainer");
-  signUpContainer.innerHTML = "";
-  signUpContainer.innerHTML += renderSignUpWindow();
-}
-
-function backToLogin() {
-  let loginContainer = document.getElementById("loginContentContainer");
-  loginContainer.innerHTML = "";
-  loginContainer.innerHTML = renderLogin();
-}
+//sign Up Logic
 
 function openWithGuestLogin() {
-  guestLoggedIn = true;
-  localStorage.setItem('guest',JSON.stringify(guestLoggedIn));
+  guest = true;
+  localStorage.setItem('guest', JSON.stringify(guest));
   window.location.href = "summary.html";
 }
 
@@ -107,7 +113,7 @@ function checkPasswords() {
     signUpButton.disabled = false;
     passwordsFalse.innerHTML = '';
   } else {
-    passwordsFalse.innerHTML = `Password does not match`;
+    passwordsFalse.innerHTML = `Passwords does not match`;
     signUpButton.disabled = true;
   }
 }
@@ -115,15 +121,15 @@ function checkPasswords() {
 // pop up
 
 function successSignUpPopup() {
-  let popupContainer = document.getElementById('successRegistration');
-  popupContainer.style.display = 'flex';
-  setTimeout(function() {
-    popupContainer.style.display = 'none';
-  }, 2500);
+  const popupContainer = document.getElementById('successRegistration');
+  popupContainer.classList.remove('d-none');
+  setTimeout(function () {
+    popupContainer.classList.add('d-none');
+  }, 4500);
 }
 
-function goBackToLoginAfterSignUp() {
+/* function showLoginTimeout() {
   setTimeout(function() {
-    window.location.href = "./index.html";
-  }, 3000);
-}
+    renderLoginWindow();
+  }, 1500);
+} */

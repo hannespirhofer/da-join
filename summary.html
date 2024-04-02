@@ -1,44 +1,139 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico">
     <title>Summary</title>
     <link rel="stylesheet" href="./css/contacts.css">
-    <link rel="stylesheet" href="./css/contacts-mobile.css">
+    <!-- <link rel="stylesheet" href="./css/contacts-mobile.css"> -->
     <link rel="stylesheet" href="./css/mobileSpecific.css">
     <link rel="stylesheet" href="./css/general-design.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/mainMenu.css">
     <link rel="stylesheet" href="./css/summary.css">
+
+    <script src="./js/includeHtml.js"></script>
     <script src="./js/renderFunctions.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/remoteStorage.js"></script>
-    <script src="./js/includeHtml.js"></script>
     <script src="./script.js"></script>
     <script src="./js/board.js"></script>
     <script src="./js/summary.js"></script>
+
 </head>
-<body onload="includeHTML(), initSummary()">
+
+<body onload="init()">
     <div id="popupContainer">
         <div id="logoutContent">
             <div class="logoutHeaderContent">
-                <a href="./legal/legalNoticeInternal.html">Legal Notice</a>
-                <a href="./legal/privacyPolicyInternal.html">Privacy Policy</a>
-                <a href="./index.html">Log out</a>
+                <a href="/legal/legalNotice.html">Legal Notice</a>
+                <a href="/legal/privacyPolicy.html">Privacy Policy</a>
+                <a href="/index.html">Log out</a>
             </div>
         </div>
     </div>
     <div class="mainContentSummary_container">
-    
-    <div w3-include-html="./templates/sidebar_template.html"></div>
-    <div w3-include-html="./templates/mobileMenuTop_template.html"></div>
-   
-    <div id="summaryContent_container">
-        <div w3-include-html="./templates/mainHeader_template.html"></div>
-        <div w3-include-html="./templates/mobileMenuFooter_template.html"></div>
+
+        <div w3-include-html="./templates/sidebar_template.html"></div>
+        <!-- <div w3-include-html="./templates/mobileMenuTop_template.html"></div> -->
+
+        <div id="summaryContent_container">
+            <div w3-include-html="./templates/mainHeader_template.html"></div>
+
+            <!-- <div w3-include-html="./templates/mobileMenuFooter_template.html"></div> -->
+
+            <div class="summary-wrapper">
+                <div class="summaryHeader">
+                    <h1 class="summaryHeadline">Join 360</h1>
+                    <div class="dividerSummaryHeader"></div>
+                    <span class="summarySpan">Key Metrics at Glance</span>
+                    <div class="dividerSummaryHeaderMobile"></div>
+                </div>
+                <div class="summary-content-wrapper">
+                    <div class="toDoContent_container">
+                        <div class="smallToDo_container">
+                            <div class="smallToDo_containeer">
+                                <div class="dflexRow">
+                                    <div class="roundContainer">
+                                        <img src="./assets/img/editPen.svg" alt="toDoPen" class="summaryImgPen">
+                                    </div>
+                                    <div class="dflexColumn">
+                                        <h1 id="currentToDoNumber" class="summaryToDoTaskHeadlines"></h1>
+                                        <span class="summarySmallSpan">To-do</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="smallToDo_containeer">
+                                <div class="dflexRow">
+                                    <div class="roundContainer">
+                                        <img src="./assets/img/Vector.svg" alt="toDoPen" class="summaryImgDone">
+                                    </div>
+                                    <div class="dflexColumn">
+                                        <h1 id="DoneToDos" class="summaryToDoTaskHeadlines"></h1>
+                                        <span class="summarySmallSpan">Done</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bigToDoAndGreetUser_container">
+                            <div class="bigToDo_container">
+                                <div class="urgenTaskContent_container">
+                                    <div class="urgentTask">
+                                        <img src="./assets/img/TaskUrgent.png" alt="urgentTask" class="summaryImg">
+                                        <div class="dflexColumn">
+                                            <h1 id="urgentToDos" class="summaryToDoTaskHeadlines"></h1>
+                                            <span class="summarySmallSpan">Urgent</span>
+                                        </div>
+                                    </div>
+                                    <div class="dividerUrgentTask"></div>
+                                    <div class="dflexColumn">
+                                        <h2 id="deadlineToDoDate" class="deadlineToDateStyle"></h2>
+                                        <span class="summarySmallSpan">Upcoming Deadline</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="taskOverview_container">
+                            <div class="smallTask_container">
+                                <div class="dflexColumn">
+                                    <h1 id="TasksInBoard" class="summaryToDoTaskHeadlines"></h1>
+                                    <span class="summarySmallSpan">Tasks in <br>
+                                        Board</span>
+                                </div>
+                            </div>
+                            <div class="smallTask_container">
+                                <div class="dflexColumn">
+                                    <h1 id="TaskInProgress" class="summaryToDoTaskHeadlines"></h1>
+                                    <span class="summarySmallSpan">Tasks In<br>
+                                        Progress</span>
+                                </div>
+                            </div>
+                            <div class="smallTask_container">
+                                <div class="dflexColumn">
+                                    <h1 id="TaskAwaitingFeedback" class="summaryToDoTaskHeadlines"></h1>
+                                    <span class="summarySmallSpan">Awaiting<br>
+                                        Feedback</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="greetUserContainer">
+                        <p id="greetUserHeadline">Good Morning</p>
+                        <p id="greetUserName">Test</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+    <!-- Includes Mobile Navigation at the Bottom -->
+    <div w3-include-html="./templates/mobileMenuFooter_template.html"></div>
+
 </body>
+
 </html>

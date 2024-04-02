@@ -1,31 +1,71 @@
+@media (min-width: 1200px) {
+    .navbar-mobile-bottom {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-left {
+        display: none;
+    }
+
+    .navbar-mobile-bottom {
+        display: flex;
+    }
+
+    .board-container-add-task {
+        margin-bottom: 120px;
+        align-items: center;
+    }
+
+    .add-task-container {
+        flex-direction: column;
+    }
+
+    .seperator {
+        display: none;
+    }
+
+    .bottom-container {
+        flex-direction: column-reverse;
+    }
+
+    .buttons-container {
+        width: 100%;
+    }
+
+    .button-create {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 1400px) {
 
     /* title */
 
-    h1 {
+    /* h1 {
         margin-left: 0;
         padding-top: 20px;
         margin-bottom: 10px;
-    }
+    } */
 
     /* Content Main Add-Task */
 
-    .board-container {
+    /* .board-container {
         margin-bottom: 220px;
-    }
+    } */
 
     .assigned-to-drop-down {
         max-height: 180px;
     }
-    
+
     /* Add-Task-Container */
 
-    .add-task-container {
+    /* .add-task-container {
         display: flex;
         flex-direction: column;
-        min-height: 0px;
-        margin: 0;
-    }
+    } */
 
     /* Container-Left */
 
@@ -37,9 +77,9 @@
 
     /* separator */
 
-    .seperator {
+    /* .seperator {
         display: none;
-    }
+    } */
 
     /* container-right */
 
@@ -49,7 +89,7 @@
 
     /* Buttons-Container */
 
-    .bottom-container {
+    /* .bottom-container {
         position: fixed;
         bottom: 100px;
         right: 0;
@@ -64,7 +104,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
+    } */
 }
 
 @media (max-width: 630px) {
@@ -141,7 +181,7 @@
     }
 
     .assigned-to {
-      max-width: 100%;
+        max-width: 100%;
     }
 
     .a-t-input-container,
@@ -151,11 +191,11 @@
     }
 
     #assignedToInput,
-    #categoryInput, 
+    #categoryInput,
     #subtaskInput {
         width: 220px;
     }
-    
+
     .category-drop-down span {
         font-size: 16px;
     }

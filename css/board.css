@@ -25,6 +25,11 @@ body{
     line-height: normal;
 }
 
+.mainContainer {
+    display: flex;
+    height: 100vh;
+}
+
 .dragover-active {
     background-color: #e7e7e7;
     border: 1px dashed #a8a8a8;
@@ -67,15 +72,21 @@ pre {
 }
 
 .board-container {
-    margin-top: 96px;
+    padding: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1680px;
+    height: 100%;
 }
 
 .board-inner-head {
     background-color: #F6F7F8;
-    margin: 0 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 0 32px 0;
 }
 
 .board-inner-head span {
@@ -99,7 +110,7 @@ pre {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 10px 32px 10px;
+    margin-bottom: 32px;
 }
 
 .col-head span {
@@ -160,7 +171,6 @@ pre {
     flex-direction: column;
     min-height: 100%;
     border-radius: 24px;
-    padding: 10px;
 }
 
 .todo-header {
@@ -254,14 +264,13 @@ pre {
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px 40px;
+    gap: 24px;
 }
 
 .column {
-    flex: 25%;
-    max-width: 25%;
+    flex: calc(25% - 74px / 4);
+    max-width: calc(25% - 74px / 4);
     box-sizing: border-box;
-    padding: 20px;
 }
 
 /* On screens that are 992px wide or less, go from four columns to two columns */

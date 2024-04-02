@@ -18,6 +18,7 @@
 
 /* Remove mobile Navigation when over 1000px */
 @media (min-width: 1000px) {
+
     .navbar-mobile-bottom,
     .close-sign-mobile,
     .backArrow,
@@ -28,6 +29,7 @@
 }
 
 @media (max-width: 1200px) {
+
     .backArrow,
     .newcontact-mobile {
         display: none;
@@ -36,8 +38,8 @@
     .content-header {
         margin-left: 0 !important;
         padding: 0 40px;
-        position: absolute;
-        width: 100%;
+        /* position: absolute;
+        width: 100%; */
     }
 
     .navbar-mobile-bottom {
@@ -54,10 +56,8 @@
 
     .contacts-container {
         margin-left: 0;
-        padding: 96px 0 100px 0;
         box-sizing: border-box;
-        /* height: calc(100vh - (100px + 96px)); */
-        height: 100%;
+        height: calc(100% - 205px);
     }
 
     .contacts-main {
@@ -104,7 +104,7 @@
         gap: 5px;
         align-items: center;
     } */
-/* 
+    /* 
     .dividerSummaryHeader {
         display: none;
     }
@@ -159,7 +159,7 @@
     .close-sign-mobile {
         display: none;
     }
-    
+
     .contact {
         gap: 16px;
     }
@@ -199,16 +199,16 @@
         display: block !important;
     }
 
-    .header-profile-icon {
+    /* .header-profile-icon {
         height: 40px;
         width: 40px;
         border-width: 2px;
         font-size: 11px;
-    }
+    } */
 
-    .header-question-icon {
+    /* .header-question-icon {
         display: none;
-    }
+    } */
 
     .mobile-logo img {
         height: 40px;
@@ -227,7 +227,8 @@
         display: none;
     }
 
-    .mobile-menu, .newcontact-mobile {
+    .mobile-menu,
+    .newcontact-mobile {
         display: flex;
         position: absolute;
         bottom: 120px;
@@ -241,7 +242,7 @@
         color: #2A3647;
     }
 
-    .newcontact-btn-mobile, 
+    .newcontact-btn-mobile,
     .newcontact-mobile {
         background-color: #2A3647;
         border-radius: 50%;

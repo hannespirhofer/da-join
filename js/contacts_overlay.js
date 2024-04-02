@@ -1,17 +1,22 @@
 let tasks;
 
 /**
- * Fetches tasks from Server and adds to tasks Array
+ * Fetch tasks from Server and loads into tasks Array
  */
-(async () => {
-    tasks = JSON.parse(await getItem('tasks'));
-})();
+async function fetchTasks() {
+    try {
+      tasks = JSON.parse(await getItem('tasks'));
+    } catch (e) {
+      console.error("Loading error:", e);
+    }
+  }
 
 /**
  * Helper function which loops over all contacts and assigned ids and removes a the contactid when its not present anymore
  * This need to be run once a user has been deleted!
  */
-function clearContactIdsFromTasks() {
+async function clearContactIdsFromTasks() {
+    await fetchTasks();
     let allContactIds = Array.from(new Set(contacts.map(ct => ct.contactid)));
     tasks.forEach(task => {
         task.contactids = task.contactids.filter(id => allContactIds.includes(id));

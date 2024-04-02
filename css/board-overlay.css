@@ -226,6 +226,9 @@ table img {
 .field-container-pu-edit {
     margin-top: 56px;
     height: 100%;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 .field-container-pu-edit label {
@@ -239,6 +242,10 @@ table img {
 
 .title-input-pu-edit {
     width: 100%;
+}
+
+.title-input-pu-edit:hover {
+    cursor: text !important;
 }
 
 .desc-input-container-pu-edit {
@@ -269,7 +276,14 @@ table img {
 }
 
 .contacts-selected-container-edit {
-    margin-top: 4px!important;
+    margin-top: 4px !important;
+    display: flex;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.initial-at:not(:first-child) {
+    margin-left: -35px;
 }
 
 .a-t-input-container-edit {

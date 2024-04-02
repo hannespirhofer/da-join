@@ -173,7 +173,7 @@ function setFocus(i) {
 /**
  * This EventListener renders the subtasks when you click outside an added subtask
  */
-document.addEventListener('click', function(event) {
+/* document.addEventListener('click', function(event) {
     for (let i = 0; i < subtasks.length; i++) {
         if (currentSubtaskFocus === i) {
             let subtasksContainer = document.getElementById(`addedSubtaskContainer${i}`);
@@ -183,7 +183,7 @@ document.addEventListener('click', function(event) {
             }
         }
     }
-});
+}); */
 
 
 /**

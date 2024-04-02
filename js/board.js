@@ -157,6 +157,21 @@ function renderDone(arr) {
 }
 
 /**
+ * This updates the task progress once its dropped in another board column and reloads the board view
+ * @param {String} taskid 
+ * @param {String} newprogress 
+ */
+function updateTask(taskid, newprogress) {
+    tasks.forEach(task => {
+        if (task.taskid == taskid) {
+            task.progress = newprogress;
+        }
+    });
+    setItem('tasks', tasks);
+    renderBoard();
+}
+
+/**
  * This filter a given task Array and filters them by the given query and returns a new Array
  * @param {Array} tasks array (can be filtered)  
  * @param {String} query like todo which defines the progress of a task Object

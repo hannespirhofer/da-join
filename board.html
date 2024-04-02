@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico">
-    <title>Task Board</title>
+    <title>Board</title>
 
     <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="stylesheet" href="./css/general-design.css" />
@@ -48,17 +48,17 @@
     <script src="./js/board-mobile.js"></script>
 </head>
 
-<body onload="init(), initAddTask()">
-    <div id="popupContainer">
+<body onload="init()">
+    <div class="mainContainer" id="popupContainer">
         <div id="logoutContent">
             <div class="logoutHeaderContent">
-                <a href="./legal/legalNoticeInternal.html">Legal Notice</a>
-                <a href="./legal/privacyPolicyInternal.html">Privacy Policy</a>
-                <a href="./index.html">Log out</a>
+                <a href="/legal/legalNotice.html">Legal Notice</a>
+                <a href="/legal/privacyPolicy.html">Privacy Policy</a>
+                <a href="/index.html">Log out</a>
             </div>
         </div>
         <!-- Include Header Template -->
-        <div class="" w3-include-html="./templates/sidebar_template.html"></div>
+        <div w3-include-html="./templates/sidebar_template.html"></div>
         <div class="board-content">
             <!-- Include Main Header Template -->
             <div w3-include-html="./templates/mainHeader_template.html"></div>

@@ -32,9 +32,10 @@ function collectInputFields() {
     let category = document.getElementById('categoryInput').value;
     let taskId = gettingContactId();
     let priority = getPriority();
-    let progress = getProgress();
+    let progress = document.getElementById('progressSelect').value;
+    if (!progress) { progress = 'todo' }
 
-    return { title, description, dueDate, category, taskId, priority, progress};
+    return { title, description, dueDate, category, taskId, priority, progress };
 }
 
 
@@ -64,7 +65,7 @@ function collectInputFields() {
  * dueDate: string
  * }}
  */
-function createTaskInstance({ title, description, dueDate, category, taskId, priority, progress}) {
+function createTaskInstance({ title, description, dueDate, category, taskId, priority, progress }) {
     return {
         "taskid": taskId,
         "title": title,
@@ -93,11 +94,14 @@ function controlIfDescriptionEmtpy(description) {
 
 
 /**
- * This function sets the new taskId
+ * This function sorts all taskids and returns the latest one
  * @returns {Number} - The new taskId
  */
 function gettingContactId() {
-    return tasks.length + 1;
+    let arr = tasks.map(task => Number(task.taskid));
+    arr.sort((a, b) => a - b);
+    const newid = arr[arr.length - 1] + 1;
+    return newid;
 }
 
 
@@ -106,13 +110,13 @@ function gettingContactId() {
  * @returns {String} - The name of the prio 'urgent', 'medium', 'low' or empty
  */
 function getPriority() {
-        for (let i = 0; i < prioButtons.length; i++){
-            let isButtonToggled = prioButtons[i]['toggled']
-            if (isButtonToggled === true) {
-                    return prioButtons[i]['name'];
-            }
+    for (let i = 0; i < prioButtons.length; i++) {
+        let isButtonToggled = prioButtons[i]['toggled']
+        if (isButtonToggled === true) {
+            return prioButtons[i]['name'];
         }
-        return '';
+    }
+    return '';
 }
 
 
@@ -120,12 +124,12 @@ function getPriority() {
  * This function gets the current progress
  * @returns {String} - The name of the current progress 'todo', 'inprogress' or 'awaitfeedback'
  */
-function getProgress() {
-    if (currentProgress === '') {
-        return 'todo';
-    } else {
-        return currentProgress;
+function setProgress(val) {
+    localStorage.setItem('progress', val);
+    if (!currentProgress) {
+        currentProgress = 'todo';
     }
+    window.location.href = "/add_task.html";
 }
 
 

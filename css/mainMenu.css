@@ -7,12 +7,11 @@
     flex-direction: column;
     justify-content: space-between;
     width: 232px;
-    min-width: 232px;
     height: 100vh;
     background: rgba(42, 54, 71, 1);
     padding: 64px 0;
     box-sizing: border-box;
-    position: fixed;
+    /* position: fixed; */
 }
 
 .nlt-img {
@@ -25,7 +24,7 @@
     flex-direction: column;
     background-color: #F6F7F8;
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
 }
 
 .content-header {
@@ -34,14 +33,15 @@
     justify-content: space-between;
     height: 96px;
     box-shadow: 0px 4px 6px 0px rgba(0,0,0,.02), 0px 2px 12px -2px rgba(0,0,0,.08), 0px 3px 6px 0px rgba(0,0,0,.06);
-    padding: 0 40px 0 100px;
+    padding: 0 40px;
     box-sizing: border-box;
-    margin-left: 232px;
     background-color: #fff;
+    margin-bottom: 8px;
 }
 
 .content-main {
-    margin-left: 232px;
+    overflow: auto;
+    margin-bottom: 16px;
 }
 
 .menu-header-text {
@@ -151,12 +151,12 @@
     width: 150px;
     height: 158px;
     background-color: #2A3647;
-    top: 100px;
-    right: 5px;
+    top: 96px;
+    right: 0px;
     border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
     z-index: 999;
     display: none;
+    justify-content: center;
  }
 
  .logoutHeaderContent {
@@ -169,12 +169,12 @@
 
  .logoutHeaderContent a {
     text-decoration: none;
-    color: #A8A8A8;
+    color: #a8a8a8;
  }
 
  .logoutHeaderContent a:hover {
     cursor: pointer;
-    font-weight: 700;
+    color: #fff;
  }
 
  .popupContainer {

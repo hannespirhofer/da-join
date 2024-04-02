@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="./css/addTask.css">
     <link rel="stylesheet" href="./css/addTask-right.css">
     <link rel="stylesheet" href="./css/addTask-mobile.css">
-    <link rel="stylesheet" href="./css/addTask-footer-sidebar.css">
-    
+    <!-- <link rel="stylesheet" href="./css/addTask-footer-sidebar.css"> -->
+
     <script src="./script.js"></script>
     <scipt src="./board.js"></scipt>
     <script src="./js/summary.js"></script>
@@ -31,9 +31,9 @@
     <div id="popupContainer">
         <div id="logoutContent">
             <div class="logoutHeaderContent">
-                <a href="./legal/legalNoticeInternal.html">Legal Notice</a>
-                <a href="./legal/privacyPolicyInternal.html">Privacy Policy</a>
-                <a href="./index.html">Log out</a>
+                <a href="/legal/legalNotice.html">Legal Notice</a>
+                <a href="/legal/privacyPolicy.html">Privacy Policy</a>
+                <a href="/index.html">Log out</a>
             </div>
         </div>
     </div>
@@ -42,14 +42,17 @@
 
         <div class="sidebar-addTask" w3-include-html="./templates/sidebar_template.html"></div>
 
-        <div class="main-header-addTask" w3-include-html="./templates/mainHeader_template.html"></div>
-        <div class="mobile-footer-addTask" w3-include-html="./templates/mobileMenuFooter_template.html"></div>
+        <div class="main-addtask">
+            <div class="main-header-addTask" w3-include-html="./templates/mainHeader_template.html"></div>
 
-        <div class="content-main content-main-addTask">
-            <div class="board-container board-container-add-task" w3-include-html="./templates/addTask_template.html"></div>
+            <div class="board-container board-container-add-task" w3-include-html="./templates/addTask_template.html">
+            </div>
+
+            <div class="mobile-footer-addTask" w3-include-html="./templates/mobileMenuFooter_template.html"></div>
         </div>
 
     </div>
-</div>
+    </div>
 </body>
+
 </html>

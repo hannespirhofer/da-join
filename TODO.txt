@@ -1,0 +1,9 @@
+User Model
+- add ids
+- add surname
+- add lastname
+
+Register(Signup)
+- check for surname and lastname form input
+- save surname, lastname and initials
+- render initials from localStorage to Header Profile Icon

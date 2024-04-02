@@ -4,6 +4,14 @@ body {
     font-family: 'Inter';
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .d-flex {
     display: flex;
 }

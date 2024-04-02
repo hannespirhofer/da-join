@@ -28,6 +28,10 @@
     display: flex !important;
 }
 
+.contacts-mainContainer {
+    display: flex;
+}
+
 .contacts-container {
     display: flex;
     flex-direction: row;
@@ -37,6 +41,7 @@
 .ctc-left {
     flex-shrink: 0;
     width: 35%;
+    max-width: 500px;
     padding: 32px 48px;
     overflow-y: scroll;
     display: flex;

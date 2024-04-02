@@ -1,0 +1,117 @@
+[
+    {
+        "email": "daunke40@gmail.com",
+        "name": "Cedric",
+        "password": "asdf"
+    },
+    {
+        "email": "test34@gmail.com",
+        "name": "test34",
+        "password": "asdf"
+    },
+    {
+        "email": "hannes@mail.de",
+        "name": "Hannes",
+        "password": "12345"
+    },
+    {
+        "email": "123@123.com",
+        "name": "Hannes",
+        "password": "123456"
+    },
+    {
+        "email": "mihai@dev.com",
+        "name": "mihai",
+        "password": "111111"
+    },
+    {
+        "email": "test123@gmail.com",
+        "name": "Test123",
+        "password": "1234"
+    },
+    {
+        "email": "test@teste.de",
+        "name": "Teste",
+        "password": "asdf"
+    },
+    {
+        "email": "stwsa@ztsrat",
+        "name": "test",
+        "password": "asdf"
+    },
+    {
+        "email": "test@saf",
+        "name": "test",
+        "password": "asdf"
+    },
+    {
+        "email": "testpopup@d",
+        "name": "test",
+        "password": "asdf"
+    },
+    {
+        "email": "test32@fa",
+        "name": "test",
+        "password": "asdf"
+    },
+    {
+        "email": "daunke40@gmail.com",
+        "name": "test",
+        "password": "asdf"
+    },
+    {
+        "email": "test34@gmail.com",
+        "name": "test",
+        "password": "asdf"
+    },
+    {
+        "email": "test34@gmail.com",
+        "name": "test324",
+        "password": "1234"
+    },
+    {
+        "email": "timer@asdf",
+        "name": "testTimer",
+        "password": "asdf"
+    },
+    {
+        "email": "mihai@dev2.com",
+        "name": "Mihai",
+        "password": "111111"
+    },
+    {
+        "email": "test34@gmail.com",
+        "name": "testFürBackToSingIn",
+        "password": "asdf"
+    },
+    {
+        "email": "hannes@mail.com",
+        "name": "Hannes",
+        "password": "123456"
+    },
+    {
+        "email": "pp@nix.de",
+        "name": "Peter Pan",
+        "password": "1234"
+    },
+    {
+        "email": "fdsafdsa@email.com",
+        "name": "fdsafda",
+        "password": "123"
+    },
+    {
+        "email": "hannes@hannes.com",
+        "name": "Hannes",
+        "password": "123456"
+    },
+    {
+        "email": "jhgf@sdds.com",
+        "name": "jhgf",
+        "password": "jhgf"
+    },
+    {
+        "email": "fds@dsfdf",
+        "name": "fdds",
+        "password": "1"
+    }
+]

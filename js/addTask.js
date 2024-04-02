@@ -31,8 +31,9 @@ let currentProgress;
  */
 async function initAddTask() {
     await includeHTML();
-    await fetchContactsAt();
-    await fetchTasksAt();
+    setCurrentProgress();
+    await fetchContacts();
+    await fetchTasks();
     renderAddTask();
     try {
         changeInitialsCurrentUser();
@@ -40,13 +41,19 @@ async function initAddTask() {
     }
 }
 
-
+/* function showProgress() {
+    document.getElementById('setProgress').innerHTML += currentProgress;
+} */
+function setCurrentProgress() {
+    currentProgress = localStorage.getItem('progress');
+    document.getElementById('progressSelect').value = currentProgress;
+}
 
 
 /**
  * This function loads the contacts from the remote storage
  */
-async function fetchContactsAt() {
+async function fetchContacts() {
     let resp = await getItem('contacts');
     contacts = JSON.parse(resp);
 }
@@ -55,7 +62,7 @@ async function fetchContactsAt() {
 /**
  * This function loads the tasks from the remote storage
  */
-async function fetchTasksAt() {
+async function fetchTasks() {
     let resp = await getItem('tasks');
     tasks = JSON.parse(resp);
 }

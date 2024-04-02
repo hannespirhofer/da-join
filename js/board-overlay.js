@@ -37,18 +37,23 @@ function addDNone(name) {
 
 
 /**
- * This function opens the pop-up to add a new task
+ * This function saves the progress variable and forwards to add task section. 
  * @param {String} progress - This is the current progress 'todo', 'inprogress' or 'awaitfeedback'
- */    
-async function openPopUpAt(progress) {
-    await getItem('tasks');
+ */
+async function addProgressTask(progress) {
+    /* await getItem('tasks');
     addDNone('popUpTaskBig');
     openPopUpContainer();
     removeDNone('popUpAtField');
     removeDNone('closeButtonPopUpAt');
-    renderAddTask();
+    if (currentProgress) {
+        currentProgress = progress;
+    }
+    window.location.href = "/add_task.html";
+
+    renderAddTask(progress);
     subtasks = [];
-    currentProgress = progress;
+    currentProgress = progress; */
 }
 
 
@@ -87,7 +92,7 @@ async function openTaskBig(id) {
  * @returns The index of the task gets returned or null
  */
 function getIndexById(id) {
-    const index = tasks.findIndex(function(task) {
+    const index = tasks.findIndex(function (task) {
         return task.taskid === id;
     })
 
@@ -187,7 +192,7 @@ function renderDescriptionPu(currentTask) {
     } else {
         description.innerHTML = '';
     }
-    
+
 }
 
 
@@ -250,7 +255,7 @@ function ifElseToShowContacts(puBigContacts, assignedToTitle, currentTask) {
             const contactid = currentTask['contactids'][i];
             const indexContact = getContactPu(contactid);
             ifElseContact(indexContact, puBigContacts, i);
-        } 
+        }
     } else {
         assignedToTitle.classList.add('d-none');
         puBigContacts.classList.add('d-none');
@@ -290,7 +295,7 @@ function ifElseContact(indexContact, puBigContacts, i) {
             <span>${contact['fullname']}</span>
         </div>
     `;
-    renderBackgroundColorOverlay(initials, i);
+        renderBackgroundColorOverlay(initials, i);
     } else {
         puBigContacts.innerHTML = '';
     }
@@ -406,7 +411,7 @@ async function closeTaskBig() {
     closePopUpContainer();
     try {
         clearInputFieldsTaskBig();
-    } catch(e) {
+    } catch (e) {
     }
     addDNone('popUpTaskBig');
     fetchAndReloadBoard();

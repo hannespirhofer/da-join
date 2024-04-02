@@ -33,20 +33,21 @@
 
 @media (max-width: 1450px) {
     .column {
-        flex: 33%;
-        max-width: 33%;
+        flex: calc((100% / 3) - 48px / 3);
+        max-width: calc((100% / 3) - 48px / 3);
+        box-sizing: border-box;
     }
 }
 
 /* Here starts the responsiveness (header adaptation, sidebar removing and mobile footer addition) */
 @media (max-width: 1200px) {
-    .board-container {
+    /* .board-container {
         margin-top: 110px;
-    }
+    } */
 
     .board-inner-head {
         gap: 16px;
-        margin: 0 25px;
+        /* margin: 0 25px; */
     }
 
     .board-inner-head .add-task-desktop {
@@ -85,7 +86,7 @@
     }
 
     .row {
-        padding: 20px 5px;
+        padding: 40px 0;
     }
 
     .task-holder {
@@ -100,12 +101,12 @@
         flex-direction: column;
     }
 
-    .content-header {
+    /* .content-header {
         margin-left: 0 !important;
         padding: 0 40px;
         position: absolute;
         width: 100%;
-    }
+    } */
 
     .navbar-mobile-bottom {
         display: flex;
@@ -124,28 +125,33 @@
 
 @media (max-width: 950px) {
     .column {
-        flex: 50%;
-        max-width: 50%;
+        flex: calc(50% - 24px / 2);
+        max-width: calc(50% - 24px / 2);
+        padding: 0;
     }
 
-    .header-left {
+    .row {
+        gap: 24px;
+    }
+
+    /* .header-left {
         display: none;
     }
 
     .mobile-logo {
         display: block !important;
-    }
+    } */
 
-    .header-profile-icon {
+    /* .header-profile-icon {
         height: 40px;
         width: 40px;
         border-width: 2px;
         font-size: 11px;
-    }
+    } */
 
-    .header-question-icon {
+    /* .header-question-icon {
         display: none;
-    }
+    } */
 
     .mobile-logo img {
         height: 40px;
