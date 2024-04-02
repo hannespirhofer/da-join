@@ -46,7 +46,11 @@ async function initAddTask() {
 } */
 function setCurrentProgress() {
     currentProgress = localStorage.getItem('progress');
-    document.getElementById('progressSelect').value = currentProgress;
+    if (currentProgress) {
+        document.getElementById('progressSelect').value = currentProgress;
+    } else {
+        document.getElementById('progressSelect').value = 'todo';
+    }
 }
 
 
