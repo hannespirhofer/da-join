@@ -96,7 +96,6 @@ function renderSubtasksEdit() {
 function returnSubtaskTemplateEdit(i) {
     return /*html*/`
         <div class="added-subtask-container" id="addedSubtaskContainerEdit${i}">
-            <span class="point">•</span>
             <input class="added-subtask" id="addedSubtaskEdit${i}" type="text" ondblclick="inputAddedSubtaskEdit(${i})" readonly>
             <div class="tool-container" id="toolContainerEdit${i}">
                 <div id="toolsNoFocusEdit${i}" class="tools-no-focus">

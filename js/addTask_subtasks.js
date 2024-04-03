@@ -97,7 +97,6 @@ function renderSubtasks() {
 function returnSubtaskTemplate(i) {
     return /*html*/`
         <div class="added-subtask-container" id="addedSubtaskContainer${i}">
-            <span class="point">•</span>
             <input class="added-subtask" id="addedSubtask${i}" type="text" ondblclick="inputAddedSubtaskFocus(${i})" readonly>
             <div class="tool-container" id="toolContainer${i}">
                 <div id="toolsNoFocus${i}" class="tools-no-focus">

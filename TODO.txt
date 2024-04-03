@@ -7,3 +7,17 @@ Register(Signup)
 - check for surname and lastname form input
 - save surname, lastname and initials
 - render initials from localStorage to Header Profile Icon
+
+Add Task
+- Progress Todo should only be when from Navigation- storage shouldnt be used
+- fake dates to close dates updates when site is loaded
+
+Tasks
+- Implement Tasks per User so not each user see others tasks!
+
+Logout
+- Logout FUntion should not only be anchor to /index page
+- remove at least username by removeItem('username') from storage when logout
+
+Security
+- Implement some security

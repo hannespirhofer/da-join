@@ -188,9 +188,9 @@ textarea::placeholder {
     line-height: 24px;
 }
 
-.assigned-to {
+/* .assigned-to {
     width: 100%;
-}
+} */
 
 .a-t-input-container,
 .category-container,
@@ -207,8 +207,8 @@ textarea::placeholder {
 
 .progress-select {
     width: 100%;
-    -webkit-appearance: none; 
-    appearance: none
+    font-size: 16px;
+    line-height: 19.2px;
 }
 
 .inputField:hover {

@@ -165,6 +165,7 @@ table img {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    gap: 16px;
 }
 
 .pu-big-edit-container:hover {
@@ -202,16 +203,14 @@ table img {
     width: 525px;
     max-height: 90%;
     background-color: white;
-    /* border-radius: 30px; */
     padding: 48px 40px 48px 40px;
     box-sizing: border-box;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 4px 6px 0px, rgba(0, 0, 0, 0.08) 0px 2px 12px -2px, rgba(0, 0, 0, 0.06) 0px 3px 6px 0px;
-    margin: 10px 0;
     overflow-y: auto;
 }
 
-.close-button-pu-edit {
+/* .close-button-pu-edit {
     width: 32px;
     height: 32px;
     position: absolute;
@@ -221,14 +220,13 @@ table img {
 
 .close-button-pu-edit:hover {
     cursor: pointer;
-}
+} */
 
 .field-container-pu-edit {
-    margin-top: 56px;
-    height: 100%;
     gap: 24px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .field-container-pu-edit label {
@@ -262,18 +260,18 @@ table img {
     width: 100% !important;
 }
 
-.field-container-pu-edit .assigned-to {
+/* .field-container-pu-edit .assigned-to {
     margin-top: 14px;
-}
+} */
 
 #assignedToInputEdit {
     border: none;
     outline: none;
 }
 
-.assigned-to-edit {
+/* .assigned-to-edit {
     height: auto;
-}
+} */
 
 .contacts-selected-container-edit {
     margin-top: 4px !important;
@@ -299,9 +297,9 @@ table img {
     max-height: 300px;
 }
 
-.field-container-pu-edit .subtasks {
+/* .field-container-pu-edit .subtasks {
     margin-top: 14px;
-}
+} */
 
 .input-field-subtask-edit {
     outline: none;
@@ -324,11 +322,11 @@ table img {
 
 .added-subtasks-container-edit {
     width: 100%;
-    margin-top: 0 !important;
 }
 
 .added-subtasks-container-edit .added-subtask-container input {
-    width: 100%;
+    width: 80%;
+    overflow: auto;
 }
 
 .ok-button-container {
@@ -363,4 +361,30 @@ table img {
 
 .ok-button:hover {
     cursor: pointer;
+}
+
+.close-icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-icon img {
+    width: 32px;
+}
+
+.edit-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.btn-ok {
+    flex: 1;
+}
+
+.editForm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }

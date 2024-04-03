@@ -5,7 +5,7 @@ body {
 #popupContainer {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   height: 100vh;
   flex-direction: column;
   align-items: center;
@@ -26,11 +26,9 @@ body {
   max-width: 1440px;
   display: flex;
   justify-content: space-between;
-  position: absolute;
   align-items: flex-start;
   padding: 40px;
   box-sizing: border-box;
-  top: 0;
 }
 
 .logoSmall {}
@@ -74,13 +72,13 @@ body {
 .login_container {
   flex-direction: column;
   align-items: center;
-  padding: 16px;
+  padding: 40px;
   box-sizing: border-box;
   background-color: white;
   border-radius: 30px;
   max-height: 80%;
   width: 90%;
-  max-width: 470px;
+  max-width: 500px;
   overflow-y: auto;
 }
 
@@ -142,6 +140,15 @@ body {
   font-weight: 700;
 }
 
+.btn-login {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+#guestLoginButton {
+  flex-shrink: 0;
+}
+
 #signUpButton:enabled {
   background-color: #0d99ff;
   cursor: pointer;
@@ -182,7 +189,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 35px;
+  gap: 8px;
 }
 
 .loginHeadline {
@@ -232,13 +239,13 @@ body {
 .signup_container {
   flex-direction: column;
   align-items: center;
-  padding: 16px;
+  padding: 40px;
   box-sizing: border-box;
   background-color: white;
   border-radius: 30px;
   max-height: 80%;
   width: 90%;
-  max-width: 470px;
+  max-width: 500px;
   overflow-y: auto;
 }
 
@@ -282,8 +289,6 @@ body {
 /* bottom legal Content */
 
 .legalContentLogin {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -478,11 +483,7 @@ body {
     display: flex;
   }
 
-  .login_container {
-    width: 90%;
-    padding: 24px;
-  }
-
+  .login_container,
   .signup_container {
     width: 90%;
     padding: 24px;
@@ -515,10 +516,9 @@ body {
     width: 100%;
   }
 
-  .loginButtons_container {
-    gap: unset;
-    justify-content: space-around;
-  }
+  /* .loginButtons_container {
+    gap: 8px;
+  } */
 
   /* #loginButton {
     width: 90px;

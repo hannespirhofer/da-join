@@ -206,52 +206,53 @@ function createTaskInstanceEdit({taskId, title, description, category, dueDate, 
  * @returns The html-template gets returned
  */
 function renderPopUpCardEdit(index) {
-    return /*html*/`
-        <img class="close-button-pu-edit" src="./assets/img/close-img.png" onclick="closeTaskEdit()">
-        <form onsubmit="saveAndCloseEdit(${index}); return false">
+    return `
+
+        <div class="close-icon">
+            <img class="close-button-pu-edit" src="./assets/img/close-img.png" onclick="closeTaskEdit()">        
+        </div>
+        <form class="editForm" onsubmit="saveAndCloseEdit(${index}); return false">
             <div class="field-container-pu-edit">
 
-                <div class="title">
-                    <label class="title-label-pu-edit">Title<span class="star">*</span><br>
+                <div class="title edit-item">
+                    <label class="title-label-pu-edit">Title<span class="star">*</span></label>
                         <input id="titleInputEdit" class="inputField focus title-input-pu-edit" type="text" placeholder="Enter a title" onkeyup="checkValueTitle('titleInputEdit', 'titleRequiredContainerEdit')" required>
-                    </label>
+                    
                     <div id="titleRequiredContainerEdit" class="title-required d-none">This field is required</div>
                 </div>
 
-                <div class="description desc-pu-edit">
-                    <label class="description-label-pu-edit">Description<br>
+                <div class="description desc-pu-edit edit-item">
+                    <label class="description-label-pu-edit">Description</label>
                         <div class="desc-input-container desc-input-container-pu-edit">
                             <textarea id="descriptionInputEdit" class="focus" placeholder="Enter a Description"></textarea>
-                        </div>
-                    </label>
+                        </div>                    
                 </div>
                 
-                <div class="due-date">
-                    <label>Due date<span class="star">*</span><br>
+                <div class="due-date edit-item">
+                    <label>Due date<span class="star">*</span></label>
                         <div class="d-d-input-container d-d-input-container-pu-edit" id="dateInputContainer">
                             <input id="dateInputEdit" type="date" class="inputField focus color-date-input-gray date-input-pu-edit" onclick="minMaxDate('dateInputEdit')" onkeyup="checkValueDueDate('dateInputEdit', 'dateRequiredContainerEdit')" onchange="colorFontInput('dateInputEdit'), checkValueDueDate('dateInputEdit', 'dateRequiredContainerEdit')" required> 
-                        </div>
-                    </label>
+                        </div>                    
                     <div id="dateRequiredContainerEdit" class="date-required d-none">This field is required</div>
                 </div>
 
-                <div class="prio">
-                    <label>Priority<br>
+                <div class="prio edit-item">
+                    <label>Priority</label>
                         <div class="button-prio-container button-prio-container-edit">
                             <div class="button-prio" id="prioButtonEdit1" onclick="setPrio(1, 'prioButtonEdit', 'prioColorEdit', 'prioWhiteEdit', 'prioEdit')"><span class="prio-name" id="prioEdit1">Urgent</span><img src="./assets/img/img-urgent.png" id="prioColorEdit1"><img class="d-none" src="./assets/img/img-urgent-white.png" id="prioWhiteEdit1"></div>
                             <div class="button-prio" id="prioButtonEdit2" onclick="setPrio(2, 'prioButtonEdit', 'prioColorEdit', 'prioWhiteEdit', 'prioEdit')"><span class="prio-name" id="prioEdit2">Medium</span><img src="./assets/img/img-medium.png" id="prioColorEdit2"><img class="d-none" src="./assets/img/img-medium-white.png" id="prioWhiteEdit2"></div>
                             <div class="button-prio" id="prioButtonEdit3" onclick="setPrio(3, 'prioButtonEdit', 'prioColorEdit', 'prioWhiteEdit', 'prioEdit')"><span class="prio-name" id="prioEdit3">Low</span><img src="./assets/img/img-low.png" id="prioColorEdit3"><img class="d-none" src="./assets/img/img-low-white.png" id="prioWhiteEdit3"></div>
                         </div>
-                    </label>
+                    
                 </div>
 
-                <div class="assigned-to assigned-to-edit">
-                    <label>Assigned to<br>
+                <div class="assigned-to assigned-to-edit edit-item">
+                    <label>Assigned to</label>
                         <div class="a-t-input-container a-t-input-container-edit" id="aTInputContainerEdit">
                             <input class="inputField" placeholder="Select contacts to assign" id="assignedToInputEdit" onfocus="inputAssignedToFocus('aTInputContainerEdit')" onblur="inputAssignedToBlur('aTInputContainerEdit')" onkeyup="filterNamesEdit()">
                             <img src="./assets/img/arrow-drop-down.png" class="arrow-drop-down" id="arrowAssignedToEdit" onclick="toggleAssignedToDropDownEdit()">
                         </div>
-                    </label>
+                    
                     <div id="assignedToDropDownEdit" class="assigned-to-drop-down at-drop-down-edit d-none">
                         <div id="assignedToDropDownWrapperEdit" class="assigned-to-drop-down-wrapper">
                         </div>
@@ -260,8 +261,8 @@ function renderPopUpCardEdit(index) {
                     </div>
                 </div>
 
-                <div class="subtasks subtasks-edit">
-                    <label>Subtasks<br>
+                <div class="subtasks subtasks-edit edit-item">
+                    <label>Subtasks</label>
                         <div class="subtasks-container subtasks-container-edit" id="subtaskContainerEdit">
                         <input type="text" placeholder="Add new Subtask" class="inputField input-field-subtask-edit" id="subtaskInputEdit" onfocus="inputSubtaskFocusEdit()" oninput="inputSubtaskEdit()" onblur="inputSubtaskBlurEdit()">
                         <img src="./assets/img/plus-black.png" class="plus-img" id="plusImgEdit">
@@ -271,14 +272,14 @@ function renderPopUpCardEdit(index) {
                             <img src="./assets/img/check-black.png" class="check-black-img" onclick="addSubtaskEdit()">
                         </div>
                         </div>
-                    </label>
+                    
                     <div id="addedSubtasksContainerEdit" class="added-subtasks-container added-subtasks-container-edit">
                     </div>
                 </div>
 
             </div>
             <div class="ok-button-container">
-                <button class="ok-button" type="submit">Ok<img src="./assets/img/check.png"></button>
+                <button class="button-dark btn-ok" type="submit">Ok<img src="./assets/img/check.png"></button>
             </div>
         </form>
     `;

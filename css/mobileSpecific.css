@@ -45,7 +45,7 @@
     position: absolute;
     bottom: 0;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
     gap: 60px;
     height: 100px;
     width: 100%;
@@ -103,5 +103,7 @@
 @media (max-width: 450px) {
     .navbar-mobile-bottom {
         gap: 16px !important;
+        padding: 0 5px;
+        box-sizing: border-box;
     }
 }

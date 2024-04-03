@@ -121,8 +121,6 @@
     }
 }
 
-@media (max-width: 1000px) {}
-
 @media (max-width: 950px) {
     .column {
         flex: calc(50% - 24px / 2);
@@ -222,4 +220,26 @@
         height: 100%;
         justify-content: space-between;
     }    
+}
+
+@media (max-width: 450px) {
+    .board-container {
+        padding: 16px;
+    }
+
+    .column {
+        padding: 0;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row {
+        gap: 48px;
+        padding: 0 0 24px 0;
+    }
+
+    .content-main {
+        height: calc(100% - 205px);
+    }
 }

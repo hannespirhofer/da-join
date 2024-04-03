@@ -55,9 +55,8 @@ body {
 }
 
 .dividerSummaryHeader {
-  border: 3px;
   width: 3px;
-  height: 59px;
+  height: 100%;
   background-color: #0d99ff;
 }
 
@@ -107,7 +106,7 @@ body {
   background-color: white;
   border-radius: 30px;
   width: 100%;
-  padding: 24px;
+  padding: 16px;
   box-sizing: border-box;
 }
 
@@ -185,7 +184,8 @@ body {
 .urgenTaskContent_container {
   display: flex;
   align-items: center;
-  gap: 55px;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .urgentTask {
@@ -201,10 +201,9 @@ body {
 }
 
 .dividerUrgentTask {
-  height: 102.02px;
+  height: 100%;
   width: 3px;
   background-color: #d1d1d1;
-  border: 2px;
 }
 
 .deadlineToDateStyle {
@@ -336,6 +335,7 @@ body {
 
   .summary-content-wrapper {
     justify-content: center;
+    flex: 1;
   }
 
   .toDoContent_container {
@@ -507,9 +507,9 @@ body {
     align-items: start;
   }
 
-  .summaryHeader {
+  /* .summaryHeader {
     padding-left: 10px;
-  }
+  } */
 
   /* .mobileSpan {
     font-size: 12px;
@@ -547,6 +547,7 @@ body {
 
   .summary-wrapper {
     padding: 16px;
+    gap: 16px;
   }
 
   /* .mobileNavbarIcons {
@@ -574,12 +575,7 @@ body {
   } */
 
   /* .summaryHeader {
-    display: flex;
-    flex-direction: column;
-    padding-left: 74px;
-    padding-bottom: 50px;
-    gap: 15px;
-    align-items: start;
+    
   } */
 
   .smallToDo_containeer {
@@ -608,9 +604,9 @@ body {
     align-items: start;
   }
 
-  .summaryHeader {
+  /* .summaryHeader {
     padding-left: 10px;
-  }
+  } */
 
   .smallToDo_container {
     gap: 10px;
@@ -630,11 +626,11 @@ body {
   }
 
   .summaryHeadline {
-    font-size: 37px;
+    font-size: 18px;
   }
 
   .summarySpan {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .deadlineToDateStyle {
