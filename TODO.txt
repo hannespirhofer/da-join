@@ -24,3 +24,5 @@ Logout
 
 Security
 - Implement some security
+
+edit contact doenst fit into mobile screen height!
