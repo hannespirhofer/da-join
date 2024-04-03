@@ -9,12 +9,15 @@
         display: none;
     }
 
+    .mobileHeader {
+        display: flex;
+    }
+
     .navbar-mobile-bottom {
         display: flex;
     }
 
     .board-container-add-task {
-        margin-bottom: 120px;
         align-items: center;
     }
 
@@ -112,8 +115,7 @@
 
     .board-container-add-task {
         width: 100%;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding: 16px;
     }
 
     /* title */

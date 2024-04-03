@@ -18,7 +18,7 @@ body {
 .summary-wrapper {
   padding: 40px;
   box-sizing: border-box;
-  height: 100%;
+  height: calc(100% - 100px);
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -27,7 +27,6 @@ body {
 
 .summary-content-wrapper {
   display: flex;
-  align-items: center;
   gap: 32px;
   width: 100%;
 }
@@ -143,6 +142,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -299,12 +299,12 @@ body {
     display: none;
   }
 
+  .mobileHeader {
+    display: flex;
+}
+
   .navbar-mobile-bottom {
     display: flex;
-  }
-
-  .summary-wrapper {
-    height: calc(100% - (96px + 100px));
   }
 
   .navbar-mobile-content {
@@ -335,6 +335,7 @@ body {
 
   .summary-content-wrapper {
     justify-content: center;
+    align-items: center;
     flex: 1;
   }
 
@@ -635,5 +636,9 @@ body {
 
   .deadlineToDateStyle {
     font-size: 12px;
+  }
+
+  .summaryHeader {
+    display: none;
   }
 }

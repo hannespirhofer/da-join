@@ -119,6 +119,10 @@
     .nav-left {
         display: none;
     }
+
+    .mobileHeader {
+        display: flex;
+    }
 }
 
 @media (max-width: 950px) {
@@ -224,7 +228,7 @@
 
 @media (max-width: 450px) {
     .board-container {
-        padding: 16px;
+        padding: 0 16px;
     }
 
     .column {
@@ -237,9 +241,5 @@
     .row {
         gap: 48px;
         padding: 0 0 24px 0;
-    }
-
-    .content-main {
-        height: calc(100% - 205px);
     }
 }

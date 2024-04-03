@@ -76,6 +76,15 @@
     }
 } */
 
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-logo {
+    display: none;
+}
+
 @media (max-width: 950px) {
     .navbar-mobile-bottom {
         gap: 32px !important;
@@ -92,7 +101,8 @@
     }
 
     .mobile-logo {
-        display: block !important;
+        display: flex;
+        align-items: center;
     }
 
     .mobile-logo img {
@@ -102,8 +112,9 @@
 
 @media (max-width: 450px) {
     .navbar-mobile-bottom {
-        gap: 16px !important;
+        /* gap: 16px !important;
         padding: 0 5px;
-        box-sizing: border-box;
+        box-sizing: border-box; */
+        display: none !important;
     }
 }

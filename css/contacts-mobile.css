@@ -37,9 +37,6 @@
 
     .content-header {
         margin-left: 0 !important;
-        padding: 0 40px;
-        /* position: absolute;
-        width: 100%; */
     }
 
     .navbar-mobile-bottom {
@@ -54,10 +51,13 @@
         display: none;
     }
 
+    .mobileHeader {
+        display: flex;
+    }
+
     .contacts-container {
         margin-left: 0;
         box-sizing: border-box;
-        height: calc(100% - 205px);
     }
 
     .contacts-main {
@@ -195,10 +195,6 @@
         display: none;
     }
 
-    .mobile-logo {
-        display: block !important;
-    }
-
     /* .header-profile-icon {
         height: 40px;
         width: 40px;
@@ -231,8 +227,8 @@
     .newcontact-mobile {
         display: flex;
         position: absolute;
-        bottom: 120px;
-        right: 0;
+        bottom: 24px;
+        right: 24px;
         font-family: Inter;
         font-size: 16px;
         font-weight: 400;
@@ -249,7 +245,6 @@
         padding: 16px;
         justify-content: center;
         align-items: center;
-        margin-right: 20px;
     }
 
     .newcontact-btn-mobile:hover,

@@ -35,7 +35,7 @@
 .contacts-container {
     display: flex;
     flex-direction: row;
-    height: calc(100vh - 96px);
+    margin-bottom: 8px;
 }
 
 .ctc-left {
