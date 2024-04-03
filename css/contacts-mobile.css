@@ -419,8 +419,10 @@
 
     .overlay-content-container {
         height: auto;
+        max-height: 90%;
         width: 90%;
         flex-direction: column;
+        overflow: auto;
     }
 
     .overlay-form {

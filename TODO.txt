@@ -12,6 +12,9 @@ Add Task
 - Progress Todo should only be when from Navigation- storage shouldnt be used
 - fake dates to close dates updates when site is loaded
 
+Board Task Search
+- As Board only gets filtered show a text with the result of the search as Feedback to the User
+
 Tasks
 - Implement Tasks per User so not each user see others tasks!
 
